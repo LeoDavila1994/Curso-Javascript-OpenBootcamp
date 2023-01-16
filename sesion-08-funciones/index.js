@@ -1,22 +1,23 @@
-let a = 5;
-let b = 6;
 
 function withoutParameters () {
-  return a < b;
+  return true;
 }
 
-const myProm = new Promise((resolve, reject) => {
-  if(true) {
-    resolve();
-  } else {
-    reject()
-  }
-});
+function promes() {
+  return setTimeout(()=> console.log("Hola soy una promesa"), 5000)
+}
 
-myProm
-  .then(() => setTimeout(console.log("Hola soy una promesa"), 5000))
-  .catch(() => console.log("ERROR"))
-  .finally(() => console.log("Soy el finaly"))
+function* parIdGenerator() {
+  let id = 0;
+  while (true) {
+    yield id += 2;
+  }
+}
+
+const gen = parIdGenerator();
+
+console.log(gen.next().value);
+console.log(gen.next());
 
 
 
