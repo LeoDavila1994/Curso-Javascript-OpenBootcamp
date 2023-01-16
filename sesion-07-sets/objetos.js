@@ -8,7 +8,8 @@ const me = {
 
 const my_age = me.age;
 
-const social = [me,
+const social = [
+  { ...me },
   {
     my_name: "Alex",
     lastname: "Rizo",
@@ -25,3 +26,5 @@ const social = [me,
   }];
 
 const new_list = social.sort((a, b) => b.age - a.age);
+
+console.log(new_list);
