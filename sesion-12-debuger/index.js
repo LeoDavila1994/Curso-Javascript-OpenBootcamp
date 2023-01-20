@@ -17,3 +17,5 @@ const fibonacci = (limit) => {
 fibonacci();
 
 console.log(arr);
+
+
